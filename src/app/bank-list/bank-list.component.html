@@ -1,0 +1,125 @@
+<!-- coursel for bank-->
+<div style="text-align:center">
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../assets/bank4.jpg" class="d-block w-100" alt=".."  height="552" width="300">
+ 
+</div>
+</div>
+
+
+<!--   
+  <div class="card" style="width: 18rem;">
+    <img src="../assets/2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Bank name : </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">localisation: </li>
+      <li class="list-group-item">offers:</li>
+      <li class="list-group-item">rating:</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">feedbacks</a>
+      <a href="#" class="card-link">more details about this Bank</a>
+    </div>
+  </div>
+
+-->
+<div class="container">
+  <h2>LIST BANK</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Identifiant</th>
+        <th>Name</th>
+        <th>Description</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Bank of banks ">
+        <td>{{Bank.id}}</td>
+        <td>{{Bank.name}}</td>
+        <td>{{Bank.description}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            update
+          </button>
+
+        
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">update bank</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                    <div class="col-md-6 offset-md-3">
+                      
+
+                      <form>
+                        <div class="form-group">
+                          <label>id</label>
+                          <input type="number" class="form-control" id="id" [(ngModel)]="Bank.id" name="id"
+                            value="{{Bank.id}}">
+                        </div>
+
+                        <div class="form-group">
+                          <label>firstname</label>
+                          <input type="text" class="form-control" id="firstName" [(ngModel)]="Bank.name"
+                            name="firsName">
+                        </div>
+
+
+
+                        <div class="form-group">
+                          <label>lastname</label>
+                          <input type="text" class="form-control" id="lastname" [(ngModel)]="Bank.description"
+                            name="lastname">
+                        </div>
+                      </form>
+
+
+
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button (click)="updateBank(Bank)" type="button" class="btn btn-primary">Understood</button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </td>
+        <td><button (click)="deleteBankByID(Bank.id)" class="btn btn-danger">delete</button></td>
+
+      
+      </tr>
+
+    </tbody>
+
+
+  </table>
+
+
+
+</div>
+<div style="text-align:center">
+<p >ADD NEW BANK  </p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"routerLink="/registreBank">CREATE BANK</button>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,126 @@
+<div class="container">
+  <h2>user list</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>firs name</th>
+        <th>last name</th>
+        <th>date de dateNaissance</th>
+        <th>password</th>
+        <th>email</th>
+        <th>action</th>
+        <th>action</th>
+        <th>contrat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let User of users ">
+        <td>{{User.id}}</td>
+        <td>{{User.firstName}}</td>
+        <td>{{User.lastname}}</td>
+        <td>{{User.dateNaissance}}</td>
+        <td>{{User.password}}</td>
+        <td>{{User.email}}</td>
+       
+
+
+        <!--------------------------------bouton update---------------------------------------------------------->
+        
+        <td>
+
+
+
+       
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          update
+        </button>
+
+       
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">update user</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="col-md-6 offset-md-3">
+
+
+                    <form>
+                      <div class="form-group">
+                        <label>id</label>
+                        <input type="number" class="form-control" id="id" [(ngModel)]="User.id" name="id"
+                          value="{{User.id}}">
+                      </div>
+
+                      <div class="form-group">
+                        <label>firstname</label>
+                        <input type="text" class="form-control" id="firstName" [(ngModel)]="User.firstName"
+                          name="firsName">
+                      </div>
+
+
+
+                      <div class="form-group">
+                        <label>lastname</label>
+                        <input type="text" class="form-control" id="lastname" [(ngModel)]="User.lastname"
+                          name="lastname">
+                      </div>
+
+
+                      <div class="form-group">
+                        <label>dateNaissance</label>
+                        <input type="number" class="form-control" id="dateNaissance" [(ngModel)]="User.dateNaissance"
+                          name="dateNaissance">
+                      </div>
+
+
+                      <div class="form-group">
+                        <label>email</label>
+                        <input type="text" class="form-control" id="email" [(ngModel)]="User.email" name="email">
+                      </div>
+
+                      <div class="form-group">
+                        <label>password</label>
+                        <input type="text" class="form-control" id="password" [(ngModel)]="User.password"
+                          name="password">
+                      </div>
+
+
+
+
+                    </form>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button (click)="updateUser(User)" type="button" class="btn btn-primary">Understood</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </td>
+        <td><button (click)="deleteUserByID(User.id)" class="btn btn-danger">delete</button></td>
+
+          
+      </tr>
+
+    </tbody>
+
+
+  </table>
+
+
+
+</div>

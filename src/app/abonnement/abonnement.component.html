@@ -1,0 +1,111 @@
+<div class="container">
+    <h2>contrat list</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>contractType</th>
+
+                <th>idProducut</th>
+                <th>price</th>
+                <th>"dateContrat</th>
+                <th>dateStart"</th>
+                <th>dateEnd</th>
+                <th>user</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Contrat of contrats ">
+                <td>{{Contrat.id}}</td>
+                <td>{{Contrat.contractType}}</td>
+                <td>{{Contrat.idProducut}}</td>
+                <td>{{Contrat.price}}</td>
+                <td>{{Contrat.dateStart}}</td>
+                <td>{{Contrat.dateEnd}}</td>
+                <td>{{Contrat.user}}</td>
+                <td>{{Contrat.dateContrat}}</td>
+
+               
+
+
+
+
+            </tr>
+        </tbody>
+    </table>
+    <!------------------------------- affichage des abonnment avc bootstrap------------------------- <td><button (click)="abonnement()" class="btn btn-danger">AUTO GERATION OF THE abonnement</button></td>--------------------------->
+
+
+   
+
+   <!-- Button trigger modal -->
+<button (click)="abonnement()" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    AUTO GERATION OF THE abonnement
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <p>opreation done, please wait few seconds this operation takes a while , we are sending to you emails of confirmation contains details about your folloew</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!------------------------------- affichage des abonnment avc bootstrap---------------------------------------------------->
+
+    <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">SHOW ME THE auto genrated follow</button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Congrats!</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+
+
+            <h2>abonnement list</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>firstName</th>
+                        <th>lastname</th>
+                        <th>typeCard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Contrat of contrats ">
+                        <td>{{Contrat.id}}</td>
+                        <td>{{Contrat.firstName}}</td>
+                        <td>{{Contrat.lastname}}</td>
+                        <td>{{Contrat.typeCard}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</div>

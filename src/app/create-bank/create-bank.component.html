@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="col-md-6 offset-md-3">
+        <h3>create Bank</h3>
+
+        <form (ngSubmit)="onSubmit()">
+
+         
+
+
+            <div class="form-group">
+                <label>name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="bankss.name" name="name">
+            </div>
+
+
+            <div class="form-group">
+                <label>description</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="bankss.description"
+                    name="dateNaissance">
+            </div>
+
+
+
+            <button class="=" btn tbn-success type="submit">submit</button>
+
+        </form>
+    </div>
+</div>
