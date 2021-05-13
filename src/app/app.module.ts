@@ -3,9 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import{HttpClientModule}from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { CreateUserComponent } from './create-user/create-user.component';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
+import { CameraComponent } from './camera/camera.component';
+import {WebcamModule} from 'ngx-webcam';
+import { UserListComponent } from './user-list/user-list.component';
+import { from } from 'rxjs';
+import { CreateUserComponent } from './create-user/create-user.component';
 import { AbonnementComponent } from './abonnement/abonnement.component';
 import { LoginComponent } from './login/login.component';
 import { UpdateComponent } from './update/update.component';
@@ -18,14 +22,13 @@ import { RentComponent } from './rent/rent.component';
 import { BuyComponent } from './buy/buy.component';
 import { CreateBankComponent } from './create-bank/create-bank.component';
 import { CreateLoginComponent } from './create-login/create-login.component';
-import { MenuComponent } from './menu/menu.component';
-import { CameraComponent } from './camera/camera.component';
-import {WebcamModule} from 'ngx-webcam';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    MenuComponent,
+    CameraComponent,
     UserListComponent,
     CreateUserComponent,
     AbonnementComponent,
@@ -39,11 +42,9 @@ import {WebcamModule} from 'ngx-webcam';
     RentComponent,
     BuyComponent,
     CreateBankComponent,
-    CreateLoginComponent,
-    MenuComponent,
-    CameraComponent,
-    
+    CreateLoginComponent
   ],
+    
   imports: [
     BrowserModule,
     AppRoutingModule,

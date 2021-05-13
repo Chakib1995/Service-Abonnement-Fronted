@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MenuComponent} from './menu/menu.component';
+import{ CameraComponent} from './camera/camera.component';
 import { AbonnementComponent } from './abonnement/abonnement.component';
 import { AssurenceComponent } from './assurence/assurence.component';
 import { BankListComponent } from './bank-list/bank-list.component';
@@ -13,28 +15,25 @@ import { ProfileComponent } from './profile/profile.component';
 import { RentComponent } from './rent/rent.component';
 import { UpdateComponent } from './update/update.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { MenuComponent} from './menu/menu.component';
-import{ CameraComponent} from './camera/camera.component';
 
 
 const routes: Routes = [
   {path:'', component:MenuComponent, children:[
-    
-    {path: 'registre' , component:CreateUserComponent},
     {path: 'camera' , component:CameraComponent},
-
-  {path: 'showUser' , component:UserListComponent},
-  {path: 'update/:id' , component:UpdateComponent},
-  {path: 'home' , component:HomeComponent},
-  {path: 'profile' , component:ProfileComponent},
-  {path: 'bank' , component:BankListComponent},
-  {path: 'catalogue' , component:CatalogueComponent},
-  {path: 'assurence' , component:AssurenceComponent},
-  {path: 'rent' , component:RentComponent},
-  {path: 'buy' , component:BuyComponent},
-  {path: 'registreBank' , component:CreateBankComponent},
-  {path: 'abonnement' , component:AbonnementComponent},]},
+    {path: 'registre' , component:CreateUserComponent},
+    {path: 'showUser' , component:UserListComponent},
     {path: 'login' , component:LoginComponent},
+    {path: 'update/:id' , component:UpdateComponent},
+    {path: 'home' , component:HomeComponent},
+    {path: 'profile' , component:ProfileComponent},
+    {path: 'bank' , component:BankListComponent},
+    {path: 'catalogue' , component:CatalogueComponent},
+    {path: 'assurence' , component:AssurenceComponent},
+    {path: 'rent' , component:RentComponent},
+    {path: 'buy' , component:BuyComponent},
+    {path: 'registreBank' , component:CreateBankComponent},
+    {path: 'abonnement' , component:AbonnementComponent}]},
+    
   
 ];
   
