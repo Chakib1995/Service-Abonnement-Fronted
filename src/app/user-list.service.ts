@@ -66,8 +66,8 @@ showContracts(): Observable<Contrat[]> {
 abonnement(): Observable<Contrat[]> {
   return this.httpClient.get<Contrat[]>("http://localhost:8479/algoCard/abonnement");
 }
-
-/////////////////////////hmimida//////////////////////////////
+   
+/////////////////////////hmimida///////////////////////////////////////
 
 
 }
