@@ -1,6 +1,6 @@
 <div class="container">
     <div class="col-md-6 offset-md-3">
-        <h3 style="text-align:center">CREATE USER</h3>
+        <h3>create user</h3>
 
         <form (ngSubmit)="onSubmit()">
 
@@ -19,7 +19,7 @@
 
             <div class="form-group">
                 <label>dateNaissance</label>
-                <input type="date" class="form-control" id="dateNaissance" [(ngModel)]="userss.dateNaissance"
+                <input type="number" class="form-control" id="dateNaissance" [(ngModel)]="userss.dateNaissance"
                     name="dateNaissance">
             </div>
 
