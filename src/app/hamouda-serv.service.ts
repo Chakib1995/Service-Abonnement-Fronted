@@ -11,26 +11,26 @@ export class HamoudaServService {
   constructor(private httpHamouda: HttpClient) { }
 
   getAllUseres(): Observable<Logg> {
-  return this.httpHamouda.get<Logg>("https://localhost:8478/getAllUseres");
+  return this.httpHamouda.get<Logg>("http://localhost:8479/getAllUseres");
 }
 
 addUser(logss: Logg): Observable<object> {
-  return this.httpHamouda.post("https://localhost:8478/addUser", logss);
+  return this.httpHamouda.post("http://localhost:8479/addUser", logss);
 }
 
 
 updateUser(logss: Logg): Observable<object> {
-  return this.httpHamouda.put("https://localhost:8478/updateUser ", logss);
+  return this.httpHamouda.put("http://localhost:8479/updateUser ", logss);
 
 }
 
 deleteUserByID(id: number): Observable<object> {
-  return this.httpHamouda.delete('https://localhost:8478/removeUser/'+id);
+  return this.httpHamouda.delete('http://localhost:8479/removeUser/'+id);
 
 }
 
 authentification(email : string , password :string): Observable<Logg> {
-  return this.httpHamouda.get<Logg>("https://localhost:8478/authentification/"+email+"/"+password);
+  return this.httpHamouda.get<Logg>("http://localhost:8479/authentification/"+email+"/"+password);
 }
 
 }
